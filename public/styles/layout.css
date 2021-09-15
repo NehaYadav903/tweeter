@@ -14,18 +14,24 @@ html {
  * Global layout stuff
  
  */
- 
-
-body {
+ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: Source Sans Pro;
-  font-weight: 300;
-
-
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ body {
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+main.container {
+  width: 90%;
+  margin: auto;
+  background-color: #f4f1ec;
+  padding-bottom: 120px;
+}
+main.container {
+  padding: 0px 50px;
+}
