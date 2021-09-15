@@ -1,42 +1,29 @@
-nav {
+.nav-bar {
   background-color: #4056A1;
   height: 120px;
   width: 100%;
-  color: #FFFFFF;
+  padding: 0em 1.5em;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+.nav-text {
+  font-family: 'Bungee';
+  font-size: 35px;
+  color: #FFFF;
 }
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.write-new-tweet {
+  color: #FFFF;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav-right {
-  float: right;
-}
-span {
-  font-family: 'Bungee', sans-serif;
-  margin-left: 1.5em;
-  line-height: 3.4em;
-
+.fa-angle-double-down {
+  color: red; 
+  size: 25px;
 }
