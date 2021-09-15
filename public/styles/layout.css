@@ -24,14 +24,27 @@ html {
  */
  body {
   font-family: 'Source Sans Pro', sans-serif;
-
+  
 }
 main.container {
+  
   width: 90%;
   margin: auto;
   background-color: #f4f1ec;
   padding-bottom: 120px;
 }
+/* Responsive Design Code */
+@media only screen and (min-width: 1024px) {
+  .content-wrapper {
+    width: 50%;
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    margin-top: 120px;
+    padding-bottom: 200px;
+  }
 main.container {
   padding: 0px 50px;
+}
 }
