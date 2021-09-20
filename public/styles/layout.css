@@ -3,8 +3,9 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+ html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -12,39 +13,113 @@ html {
 
 /*
  * Global layout stuff
- 
  */
- body {
+
+nav {
+  font-family: "Source Sans Pro";
+}
+
+body {
   color: #545149;
   background-color: #f4f1ec;
+  font-family: "Source Sans Pro", "sans-serif";
   font-size: 24px;
+  margin-top: 120px;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- body {
-  font-family: 'Source Sans Pro', sans-serif;
-  
-}
-main.container {
-  
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
-  margin: auto;
-  background-color: #f4f1ec;
-  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-/* Responsive Design Code */
-@media only screen and (min-width: 1024px) {
-  .content-wrapper {
-    width: 50%;
-    right: 0;
-    position: fixed;
-    height: 100vh;
-    overflow-y: auto;
-    margin-top: 120px;
-    padding-bottom: 200px;
+
+.tweet-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  width: 60%;
+}
+
+article {
+  align-items: column;
+  border: solid;
+  margin-bottom: 0.5em;
+}
+
+.scroll-to-top button {
+  outline: none;;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 3.5em;
+  z-index: 99;
+  border: none;
+  background-color: red;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.scroll-to-top button:hover {
+  box-shadow: 4px 4px grey;
+}
+
+.scroll-to-top button .fas {
+  color: white;
+}
+
+@media only screen and (min-width:1024px) {
+
+  body {
+    padding-top: 3em;
+    display: flex;
+    align-content: space-around;
   }
-main.container {
-  padding: 0px 50px;
+
+  body .container {
+    object-fit: fill;
+    width: 50%;
+    margin-right: 2em;
+  }
 }
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.warning {background-color: #ff9800;}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
