@@ -1,33 +1,27 @@
-.header {
-  margin-top: 120px;
+.head {
   height: 400px;
-  width: 100%;
-  background-color:#55877f;
+  background-color: #55877f;
   background-image: url("/images/Image1.png");
-}
-.header-info {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%
 }
-.header-img {
-  margin-top: 30px;
-}
-.header-name h2 {
-  margin: 0px;
-  color:brown;
-  flex-direction: column;
 
+.head .name h2 {
+  color: white;
+  font-weight: 300;
 }
-/* Responsive Design Code */
-@media only screen and (min-width: 1024px) {
-  .header {
-    position: fixed;
-    height: calc(100vh - 120px);
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.head .name h2 span {
+  font-weight: 600;
+}
+
+@media only screen and (min-width:1024px) {
+  .head {
+    margin-top: 0.5em;
+    margin-left: 2em;
+    width: 500px
   }
 }
