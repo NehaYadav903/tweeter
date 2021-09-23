@@ -1,29 +1,69 @@
-.nav-bar {
+.nav-Bar {
   background-color: #4056A1;
   height: 120px;
   width: 100%;
-  padding: 0em 1.5em;
+  color: #ffffff;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.nav-text {
-  font-family: 'Bungee';
-  font-size: 35px;
-  color: #FFFF;
+.logo {
+  font-family: "Bungee";
+  font-size: larger;
+  margin: 1.5em;
 }
 
-.write-new-tweet {
-  color: #FFFF;
+.nav-Bar footer .write {
+  outline: none;
+  border: none;
+  background-color: #4056A1;
+  color: #ffffff;
+  font-family: 'Sans-serif';
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
+  margin: 1.5em;
+  font-size: 75%;
+  font-weight: 10%;
 }
 
-.fa-angle-double-down {
-  color: red; 
-  size: 25px;
+/* Animation Code */
+@keyframes bouncing-arrow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(+10px); }
+  100% { transform: translateY(0); }
+}
+
+.nav-Bar footer .fas {
+  color: red;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.nav-Bar footer .fa-angle-double-down {
+  animation-name: bouncing-arrow;
+  animation-timing-function: ease;
+}
+  /* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width:1024px) {
+  .nav-Bar {
+    background-color: #4056A1;
+    background-image: none;
+    height: 120px;
+    width: 100%;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-Bar footer .write {
+    background-color: #4056A1;
+    background-image: none;
+  }
 }
