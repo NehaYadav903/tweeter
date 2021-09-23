@@ -1,68 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
-     <!-- external fonts to your HTML file -->
-     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
-    rel="stylesheet">
-     
+    
+    <!-- Get the special fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+   
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+
+    <!-- CDN moment.js to help with displaying the time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" ></script>
+
+    <!-- New Tweets -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+
+    <!--Tweets-->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css"/>
     
+    <!--Error Message-->
+    <link rel="stylesheet" href="/styles/error-message.css" type="text/css"/>
+
+    <!--Tweet Icons-->
+    <script src="https://kit.fontawesome.com/a4c9bc2fa3.js" crossorigin="anonymous"></script>
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!--Add the Font Awesome library -->
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></script>
+    <!-- Character count JS -->
+    <script type="text/javascript" src=/scripts/composer-char-counter.js></script>
+  
+    <!-- Prevents the 'zooming out' of the webpage as the dimensions get smaller -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+    <!-- Timeago JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+  integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+  crossorigin="anonymous"></script>
 
   </head>
+
   <body>
-    <nav class="nav-bar">
-      <span class="nav-text">tweeter</span>
-      <div class="write-new-tweet">
-        <span><b>Write</b> a new tweet</span>
-        <span><i class="fas fa-angle-double-down"></i></span>
-      </div>
-    </nav>
-  
-    <header class="header">
-      <div  class="header-info">
-        <div class="header-img">
-              <img src="/images/profile-hex.png" alt="My Avatar"/> 
-          </div>
-          <br>
-          <div class="header-name">
-              <h2>Neha Yadav</h2>
-          </div>
+   <!-- Top nav bar (fixed)-->
+    <nav class="nav-Bar">
+        <div> 
+          <span class="logo">TWEETER</span> 
         </div>
-      </header>
+        <footer>     
+          <button class='write'>
+            <span><b>Write</b> a new tweet</span>
+            <i class="fas fa-angle-double-down"></i>
+          </button>
+        </footer>
+    </nav>
+
+    <header class="head">
+      <div>
+        <img src="/images/profile-hex.png"> 
+      </div>
+
+      <div class="name">
+        <h2><span>Neha Yadav</span> </h2>
+      </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container">
+
+     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form>
+        <div class="error-message">
+        </div>
+        <form action="/tweets" method="POST">
+        </div>
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
-          <div>
+
+          <div class="submit-and-display">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+
       </section>
+
+      <section class="tweet-container">
+        
+      </section>
+
+      <div class="scroll-to-top">
+        <button title="To top">
+          <i class="fas fa-angle-double-up"></i>
+        </button>
+      </div>
+      
+      
+    </main>
+    
   </body>
 </html>
