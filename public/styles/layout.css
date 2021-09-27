@@ -59,6 +59,10 @@ article {
   margin-bottom: 0.5em;
 }
 
+article {
+  margin-top: 10px;
+}
+
 article:hover,
 article:focus {
   box-shadow: 0 0.5em 0.5em rgb(114, 107, 107) ;
