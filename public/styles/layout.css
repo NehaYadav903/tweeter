@@ -50,6 +50,7 @@ body::-webkit-scrollbar {
   margin-right: auto;
   margin-bottom: 0.5em;
   width: 60%;
+  
 }
 
 article {
@@ -58,12 +59,18 @@ article {
   margin-bottom: 0.5em;
 }
 
+article:hover,
+article:focus {
+  box-shadow: 0 0.5em 0.5em rgb(114, 107, 107) ;
+}
+
+
 .scroll-to-top button {
   outline: none;;
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 3.5em;
+  right: 1.5em;
   z-index: 99;
   border: none;
   background-color: red;
@@ -80,6 +87,7 @@ article {
   color: white;
 }
 
+/* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width:1024px) {
 
   body {
@@ -94,9 +102,7 @@ article {
     margin-right: 2em;
   }
 }
-
 .error-message {
   color: #D8000C;
-	
-
 }
+
